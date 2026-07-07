@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - The 10 of the Neighborhood</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="netflix-logo">NETFLIX</h1>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Películas</a></li>
+                <li><a href="#">Novedades populares</a></li>
+                <li><a href="#">Mi lista</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <span class="nav-text">Niños</span>
+            <i class="fa-regular fa-bell icon"></i>
+            <div class="profile-avatar"></div>
+            <i class="fa-solid fa-caret-down icon"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline id="hero-video" poster="poster.jpeg">
+                <source src="trailer.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <div class="hero-vignette"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-category">
+                <span class="netflix-n">N</span> 
+                <span class="category-text">DOCUMENTAL ORIGINAL</span>
+            </div>
+            
+            <h1 class="hero-title">THE 10 OF THE<br>NEIGHBORHOOD</h1>
+            
+            <div class="hero-meta">
+                <span class="match">98% para ti</span>
+                <span class="year">2026</span>
+                <span class="age">16+</span>
+                <span class="duration">1 h 45 min</span>
+                <span class="hd">HD</span>
+            </div>
+            
+            <p class="hero-description">
+                Dreams are born in the streets. Legends are made there. It's more than a game. It's where I come from. It's who I am. Protagonizada por <strong>Fagúndez</strong>.
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-play" id="play-btn">
+                    <i class="fa-solid fa-play"></i> Reproducir
+                </button>
+                <button class="btn btn-info">
+                    <i class="fa-solid fa-circle-info"></i> Más información
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Rows -->
+        <section class="content-rows">
+            <div class="row">
+                <h2 class="row-title">Tendencias ahora</h2>
+                <div class="posters-container">
+                    <div class="poster-item" style="background-image: url('poster.jpeg');" id="poster-play"></div>
+                    <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=450&fit=crop');"></div>
+                    <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=300&h=450&fit=crop');"></div>
+                    <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&h=450&fit=crop');"></div>
+                    <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=300&h=450&fit=crop');"></div>
+                    <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=300&h=450&fit=crop');"></div>
+                </div>
+            </div>
+        
+        <div class="row">
+            <h2 class="row-title">Documentales aclamados por la crítica</h2>
+            <div class="posters-container">
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&h=450&fit=crop');"></div>
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=300&h=450&fit=crop');"></div>
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=450&fit=crop');"></div>
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=300&h=450&fit=crop');"></div>
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=300&h=450&fit=crop');"></div>
+                <div class="poster-item" style="background-image: url('https://images.unsplash.com/photo-1585951237318-9ea5e175b891?w=300&h=450&fit=crop');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Netflix Fullscreen Player -->
+    <div class="netflix-player" id="netflix-player">
+        <div class="player-header" id="player-header">
+            <i class="fa-solid fa-arrow-left back-icon" id="close-player"></i>
+        </div>
+        <video id="full-video" controls>
+            <source src="trailer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
