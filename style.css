@@ -107,7 +107,9 @@ body {
     min-height: 800px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 4%;
+    gap: 40px;
 }
 
 .hero-video-container {
@@ -152,6 +154,30 @@ body {
     width: 45%;
     max-width: 650px;
     margin-top: 10vh;
+}
+
+.hero-visuals {
+    position: relative;
+    z-index: 10;
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.hero-poster-img {
+    width: 70%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.4);
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-poster-img:hover {
+    transform: scale(1.03);
 }
 
 .hero-category {
@@ -257,7 +283,7 @@ body {
 .content-rows {
     position: relative;
     z-index: 10;
-    margin-top: -150px;
+    margin-top: 20px;
     padding-bottom: 50px;
 }
 
@@ -374,19 +400,91 @@ body {
 /* Media Queries */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide on mobile for simplicity */
+        display: none;
     }
+    
+    .hero {
+        align-items: flex-end;
+        padding-bottom: 90px;
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .hero-video {
+        object-position: top center;
+    }
+    
+    .hero-vignette {
+        background: linear-gradient(
+            0deg,
+            rgba(20,20,20,1) 0%,
+            rgba(20,20,20,0.8) 25%,
+            transparent 50%
+        );
+    }
+    
+    .hero-visuals {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .hero-poster-img {
+        width: 60%;
+        max-width: 250px;
+    }
+    
     .hero-content {
         width: 100%;
-        margin-top: 20vh;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
+    
+    .hero-category {
+        margin-bottom: 5px;
+    }
+    
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
     }
-    .poster-skeleton {
+    
+    .hero-meta {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        display: none;
+    }
+    
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .poster-item, .poster-skeleton {
         flex: 0 0 calc(33.333% - 10px);
     }
+    
     .row-title {
         font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .content-rows {
+        margin-top: -60px;
     }
 }
